@@ -1,27 +1,47 @@
 // // Get a reference to the #add-employees-btn element
 // const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
+//prompt the user to give data: first last and salary
 // Collect employee data
-// const collectEmployees = function() 
-//   // TODO: Get user input to create and return an array of employee objects
-//   let firstName = false;
-//   let lastName;
-//   let salary;
+
+  // TODO: Get user input to create and return an array of employee objects
+
+
+
+
+
+  function collectEmployeeData(){
+     let firstName= window.prompt('Enter first name!');
+     let lastName = window.prompt('Enter last name!');
+     let salary = window.prompt('Enter salary!');
+     let newEmployee= window.prompt('Would you like to add a new employee?');
+
+     let userInput =
+     [ {
+        firstName: 'John',
+        lastName: 'Doe',
+        salary: 12345
+     },
+     {
+        firstName: 'Jane',
+        lastName: 'Doe',
+        salary: 12345
+     }
+    ]
+        return userInput;
+  }
+
+  let userInput=collectEmployeeData();
+  console.log(userInput);
+ 
 
 // while (!firstName) {
-//     firstName= window.prompt('Enter first name');
-//     lastName = window.prompt('Enter last name');
-//     salary = window.prompt('Enter salary');
-
-//     if(firstName == "" && lastName == "" && salary == ""){
-//     firstName = true;
+//     firstName= window.prompt('Enter first name!');
+//     lastName = window.prompt('Enter last name!');
+//     salary = window.prompt('Enter salary!');
+// }
 //     console.log('Would you like to add a new employee?');
-// }
-//     else{
-//         console.log('cancel');
-//     }
-
-// }
+  
 
 // // Display the average salary
 // const displayAverageSalary = function(employeesArray) {
