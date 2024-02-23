@@ -8,13 +8,26 @@
 
 
 
-
+// do while loop stops when you say no to add an employee then the loop cont with the other questions.
 
   function collectEmployeeData(){
+
      let firstName= window.prompt('Enter first name!');
      let lastName = window.prompt('Enter last name!');
      let salary = window.prompt('Enter salary!');
      let newEmployee= window.prompt('Would you like to add a new employee?');
+     let addEmployee = 'yes';
+     
+
+     while(addEmployee === 'yes'){
+        let firstName= window.prompt('Enter first name!');
+        let lastName = window.prompt('Enter last name!');
+        let salary = window.prompt('Enter salary!');
+        let newEmployee= window.prompt('Would you like to add a new employee?');
+        if(addEmployee === 'no'){
+          
+        }
+     }
 
      let userInput =
      [ {
