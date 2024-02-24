@@ -1,65 +1,35 @@
 // // Get a reference to the #add-employees-btn element
-// const addEmployeesBtn = document.querySelector('#add-employees-btn');
+const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
-//prompt the user to give data: first last and salary
-// Collect employee data
 
   // TODO: Get user input to create and return an array of employee objects
 
-
-
-// do while loop stops when you say no to add an employee then the loop cont with the other questions.
-
-  function collectEmployeeData(){
-
-     let firstName= window.prompt('Enter first name!');
-     let lastName = window.prompt('Enter last name!');
-     let salary = window.prompt('Enter salary!');
-     let newEmployee= window.prompt('Would you like to add a new employee?');
-     let addEmployee = 'yes';
+  function collectEmployees(){
+     let addEmployee = true
      
 
-     while(addEmployee === 'yes'){
+     while(addEmployee === true){
         let firstName= window.prompt('Enter first name!');
         let lastName = window.prompt('Enter last name!');
         let salary = window.prompt('Enter salary!');
-        let newEmployee= window.prompt('Would you like to add a new employee?');
-        if(addEmployee === 'no'){
-          
+        let salaryInput = isNaN(salary)
+         addEmployee= window.confirm('Would you like to add a new employee?');
+        if(addEmployee === 'no'){ }
+        if(salaryInput === 'true'){
+          return window.prompt('Please enter a valid number!');
         }
      }
-
-     let userInput =
-     [ {
-        firstName: 'John',
-        lastName: 'Doe',
-        salary: 12345
-     },
-     {
-        firstName: 'Jane',
-        lastName: 'Doe',
-        salary: 12345
-     }
-    ]
+        let userInput = [];
+        userInput.push(firstName, lastName, salary)
         return userInput;
-  }
+    }
 
-  let userInput=collectEmployeeData();
-  console.log(userInput);
- 
-
-// while (!firstName) {
-//     firstName= window.prompt('Enter first name!');
-//     lastName = window.prompt('Enter last name!');
-//     salary = window.prompt('Enter salary!');
-// }
-//     console.log('Would you like to add a new employee?');
   
 
 // // Display the average salary
-// const displayAverageSalary = function(employeesArray) {
+const displayAverageSalary = function(employeesArray) {
 //   // TODO: Calculate and display the average salary
-// }
+}
 
 // // Select a random employee
 // const getRandomEmployee = function(employeesArray) {
@@ -72,62 +42,62 @@
 //   Do not modify any of the code below this line:
 // */
 
-// // Display employee data in an HTML table
-// const displayEmployees = function(employeesArray) {
-//   // Get the employee table
-//   const employeeTable = document.querySelector('#employee-table');
+// Display employee data in an HTML table
+const displayEmployees = function(employeesArray) {
+  // Get the employee table
+  const employeeTable = document.querySelector('#employee-table');
 
-//   // Clear the employee table
-//   employeeTable.innerHTML = '';
+  // Clear the employee table
+  employeeTable.innerHTML = '';
 
-//   // Loop through the employee data and create a row for each employee
-//   for (let i = 0; i < employeesArray.length; i++) {
-//     const currentEmployee = employeesArray[i];
+  // Loop through the employee data and create a row for each employee
+  for (let i = 0; i < employeesArray.length; i++) {
+    const currentEmployee = employeesArray[i];
 
-//     const newTableRow = document.createElement("tr");
+    const newTableRow = document.createElement("tr");
 
-//     const firstNameCell = document.createElement("td");
-//     firstNameCell.textContent = currentEmployee.firstName;
-//     newTableRow.append(firstNameCell);
+    const firstNameCell = document.createElement("td");
+    firstNameCell.textContent = currentEmployee.firstName;
+    newTableRow.append(firstNameCell);
 
-//     const lastNameCell = document.createElement("td");
-//     lastNameCell.textContent = currentEmployee.lastName;
-//     newTableRow.append(lastNameCell);
+    const lastNameCell = document.createElement("td");
+    lastNameCell.textContent = currentEmployee.lastName;
+    newTableRow.append(lastNameCell);
 
-//     const salaryCell = document.createElement("td");
-//     // Format the salary as currency
-//     salaryCell.textContent = currentEmployee.salary.toLocaleString("en-US",{
-//       style:"currency",
-//       currency:"USD"
-//     });
+    const salaryCell = document.createElement("td");
+    // Format the salary as currency
+    salaryCell.textContent = currentEmployee.salary.toLocaleString("en-US",{
+      style:"currency",
+      currency:"USD"
+    });
 
-//     newTableRow.append(salaryCell);
+    newTableRow.append(salaryCell);
 
-//     employeeTable.append(newTableRow);
-//   }
-// }
+    employeeTable.append(newTableRow);
+  }
+}
 
-// const trackEmployeeData = function() {
-//   const employees = collectEmployees();
+const trackEmployeeData = function() {
+  const employees = collectEmployees();
 
-//   console.table(employees);
+  console.table(employees);
 
-//   displayAverageSalary(employees);
+  displayAverageSalary(employees);
 
-//   console.log('==============================');
+  console.log('==============================');
 
-//   getRandomEmployee(employees);
+  getRandomEmployee(employees);
 
-//   employees.sort(function(a,b) {
-//     if (a.lastName < b.lastName) {
-//       return -1;
-//     } else {
-//       return 1;
-//     }
-//   });
+  employees.sort(function(a,b) {
+    if (a.lastName < b.lastName) {
+      return -1;
+    } else {
+      return 1;
+    }
+  });
 
-//   displayEmployees(employees);
-// }
+  displayEmployees(employees);
+}
 
-// // Add event listener to 'Add Employees' button
-// addEmployeesBtn.addEventListener('click', trackEmployeeData);
+// Add event listener to 'Add Employees' button
+addEmployeesBtn.addEventListener('click', trackEmployeeData);
