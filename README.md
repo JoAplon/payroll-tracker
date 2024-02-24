@@ -27,6 +27,15 @@ WHEN I choose to cancel
 THEN my employee data is displayed on the page sorted alphabetically by last name, and the console shows computed and aggregated data
 ```
 
+##Description
+
+This application was created to receive user data and push it into a form. The form is supposed to hold employees' first and last name along with salary data. You will also be able to see the array of employee data and a randomly picked employee logged in the console. Then an average was taken of the salaries which is also logged into the console.
+
+##Usage
+
+This application can be used by employers to compile all of their employee data in one place. Then be able to see the average salary of all employees. The data could be used for budgeting a company or doing payroll. All of the employee data is organized alphabetically and by last name for easy navigating. You can add as many employees as you wanted into this application.
+
+
 ## Mock-Up
 
 The following images show the web application's appearance and functionality:
