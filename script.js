@@ -31,12 +31,19 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // // Display the average salary
 const displayAverageSalary = function(employeesArray) {
 //   // TODO: Calculate and display the average salary
+let sum = 0;
+for (let i = 0; i < employeesArray.length; i++){
+  sum += employeesArray[i].salary;
+}
+let avg = sum / employeesArray.length;
+console.log(avg)
 }
 
+
 // // Select a random employee
-// const getRandomEmployee = function(employeesArray) {
+const getRandomEmployee = function(employeesArray) {
 //   // TODO: Select and display a random employee
-// }
+}
 
 // /*
 //   ====================
