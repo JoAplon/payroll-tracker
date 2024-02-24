@@ -36,7 +36,7 @@ for (let i = 0; i < employeesArray.length; i++){
   sum += employeesArray[i].salary;
 }
 let avg = sum / employeesArray.length;
-console.log(avg)
+console.log('Average employee salary:', avg);
 }
 
 
