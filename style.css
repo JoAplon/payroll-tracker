@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #7bbd77;
 }
 
 .wrapper {
@@ -27,7 +27,7 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: hsl(200, 6%, 10%);
 }
 
 h2 {
@@ -70,7 +70,7 @@ td{
 }
 
 tbody tr:nth-child(even) {
-  background-color: hsl(223, 64%, 90%);
+  background-color: hsla(135, 27%, 63%, 0.411);
 }
 
 .card-footer {
@@ -93,7 +93,7 @@ tbody tr:nth-child(even) {
 
 .btn {
   border: none;
-  background-color: hsl(223, 74%, 48%);
+  background-color: hsl(122, 100%, 38%);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
