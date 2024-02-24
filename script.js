@@ -43,6 +43,9 @@ console.log(avg)
 // // Select a random employee
 const getRandomEmployee = function(employeesArray) {
 //   // TODO: Select and display a random employee
+const pickRandom = Math.floor(Math.random() * employeesArray.length);
+const randomElement = employeesArray[pickRandom];
+  console.log('Random employee:', randomElement);
 }
 
 // /*
